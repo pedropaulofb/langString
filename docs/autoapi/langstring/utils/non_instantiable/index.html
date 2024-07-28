@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>langstring.utils.non_instantiable &mdash; langstring  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/sphinx_rtd_size.css?v=f26ae176" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/logo_resize.css?v=11130da6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="langstring.utils.validators" href="../validators/index.html" />
+    <link rel="prev" title="langstring.utils" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            langstring
+              <img src="../../../../_static/langstring-lib-logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                3.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">langstring</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#modules-and-classes">Modules and Classes:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#package-contents">Package Contents:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#language-tag-handling">Language Tag Handling:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#usage">Usage:</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">langstring.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#classes">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#id1">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">langstring</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">langstring</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">langstring.utils</a></li>
+      <li class="breadcrumb-item active">langstring.utils.non_instantiable</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/langstring/utils/non_instantiable/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-langstring.utils.non_instantiable">
+<span id="langstring-utils-non-instantiable"></span><h1>langstring.utils.non_instantiable<a class="headerlink" href="#module-langstring.utils.non_instantiable" title="Link to this heading"></a></h1>
+<p>The <cite>non_instantiable</cite> module provides the <cite>NonInstantiable</cite> metaclass, designed to prevent the instantiation of any class that uses it.</p>
+<p>This module is useful for creating classes intended solely as namespaces or containers for static methods and
+class variables, without allowing instances of such classes to be created.</p>
+<p>Key Features:
+- <strong>Instantiation Prevention</strong>: <cite>NonInstantiable</cite> ensures that any attempt to instantiate a class using this</p>
+<blockquote>
+<div><p>metaclass will raise a <cite>TypeError</cite>.</p>
+</div></blockquote>
+<p>Classes:
+- <strong>NonInstantiable</strong>: A metaclass that overrides the default instantiation behavior to prevent class</p>
+<blockquote>
+<div><p>instantiation.</p>
+</div></blockquote>
+<dl class="field-list">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">NonInstantiable</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nd">@staticmethod</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">my_static_method</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s2">&quot;This is a static method&quot;</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">instance</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>  <span class="c1">#Output: &#39;MyClass class cannot be instantiated.&#39;</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>The <cite>NonInstantiable</cite> metaclass is particularly useful for creating utility classes where instantiation does
+not make sense and should be prevented by design.</p>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#langstring.utils.non_instantiable.NonInstantiable" title="langstring.utils.non_instantiable.NonInstantiable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonInstantiable</span></code></a></p></td>
+<td><p>A metaclass that prevents the instantiation of any class that uses it.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="langstring.utils.non_instantiable.NonInstantiable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langstring.utils.non_instantiable.</span></span><span class="sig-name descname"><span class="pre">NonInstantiable</span></span><a class="headerlink" href="#langstring.utils.non_instantiable.NonInstantiable" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">type</span></code></p>
+<p>A metaclass that prevents the instantiation of any class that uses it.</p>
+<p>When a class is defined with <cite>NonInstantiable</cite> as its metaclass, any attempt to instantiate that class will
+result in a <cite>TypeError</cite>. This is useful for creating classes that are meant to be used as namespaces or
+containers for static methods and class variables, without the intention of creating instances.</p>
+<p>Key Features:
+- <strong>Prevent Instantiation</strong>: Ensures that any attempt to create an instance of a class using this metaclass</p>
+<blockquote>
+<div><p>will raise a <cite>TypeError</cite>.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Namespace Utility</strong>: Ideal for defining classes that serve as namespaces or containers for static methods
+and constants.</p></li>
+</ul>
+<dl class="field-list">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">NonInstantiable</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nd">@staticmethod</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">my_static_method</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s2">&quot;This is a static method&quot;</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">instance</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>  <span class="c1">#Output: &#39;MyClass class cannot be instantiated.&#39;</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Methods:</dt><dd><p>__call__: Overrides the default call behavior to prevent instantiation.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="langstring.utils.non_instantiable.NonInstantiable.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#langstring.utils.non_instantiable.NonInstantiable.__call__" title="Link to this definition"></a></dt>
+<dd><p>Override the default call behavior to prevent instantiation of the class.</p>
+<p>When this method is called, it raises a <cite>TypeError</cite>, effectively preventing the creation of an instance of the
+class that uses <cite>NonInstantiable</cite> as its metaclass.</p>
+<dl class="field-list">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>TypeError</strong> – Always, to indicate that the class cannot be instantiated.</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">MyClass</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">NonInstantiable</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nd">@staticmethod</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">my_static_method</span><span class="p">():</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s2">&quot;This is a static method&quot;</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">instance</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>  <span class="c1">#Output: &#39;MyClass class cannot be instantiated.&#39;</span>
+<span class="gp">...</span>
+</pre></div>
+</div>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="langstring.utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../validators/index.html" class="btn btn-neutral float-right" title="langstring.utils.validators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Pedro Paulo F. Barcelos &lt;p.p.favatobarcelos@utwente.nl&gt;.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

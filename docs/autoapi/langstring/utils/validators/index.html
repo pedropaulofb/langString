@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>langstring.utils.validators &mdash; langstring  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/sphinx_rtd_size.css?v=f26ae176" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/logo_resize.css?v=11130da6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="langstring.controller" href="../../controller/index.html" />
+    <link rel="prev" title="langstring.utils.non_instantiable" href="../non_instantiable/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            langstring
+              <img src="../../../../_static/langstring-lib-logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                3.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">langstring</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#modules-and-classes">Modules and Classes:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#package-contents">Package Contents:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#language-tag-handling">Language Tag Handling:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#usage">Usage:</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">langstring.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#classes">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#id1">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">langstring</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">langstring</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">langstring.utils</a></li>
+      <li class="breadcrumb-item active">langstring.utils.validators</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/langstring/utils/validators/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-langstring.utils.validators">
+<span id="langstring-utils-validators"></span><h1>langstring.utils.validators<a class="headerlink" href="#module-langstring.utils.validators" title="Link to this heading"></a></h1>
+<p>The <cite>validators</cite> module provides two classes, <cite>TypeValidator</cite> and <cite>FlagValidator</cite>, for validating argument types and flag-based constraints, respectively.</p>
+<p>This module defines two classes:
+- <cite>TypeValidator</cite>: Handles type validation for arguments based on type hints. It includes methods for validating</p>
+<blockquote>
+<div><p>single arguments, iterables, and decorated functions or methods.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><cite>FlagValidator</cite>: Handles validation and transformation of text and language arguments based on configuration flags
+managed by the <cite>Controller</cite>.</p></li>
+</ul>
+<p>The validators ensure that arguments and values adhere to specified types and constraints, enhancing the robustness
+and reliability of the application.</p>
+<p>Key Features:
+- <strong>Type Validation</strong>: <cite>TypeValidator</cite> offers methods to validate single arguments, iterables, and function/method</p>
+<blockquote>
+<div><p>arguments based on type hints.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Flag-based Validation</strong>: <cite>FlagValidator</cite> provides methods to validate and transform text and language arguments
+according to control flags.</p></li>
+<li><p><strong>Separation of Concerns</strong>: By separating type validation and flag-based validation into different classes, the module
+maintains a clear and organized structure.</p></li>
+</ul>
+<p>Classes:
+- <strong>TypeValidator</strong>: Validates argument types based on type hints.
+- <strong>FlagValidator</strong>: Validates and transforms arguments based on control flags.</p>
+<p>Enums Utilized:
+- <strong>GlobalFlag</strong>: Flags affecting the behavior of all classes.
+- <strong>LangStringFlag</strong>: Flags specific to the <cite>LangString</cite> class.
+- <strong>SetLangStringFlag</strong>: Flags specific to the <cite>SetLangString</cite> class.
+- <strong>MultiLangStringFlag</strong>: Flags specific to the <cite>MultiLangString</cite> class.</p>
+<p>The validators in this module are designed to be non-instantiable, emphasizing their role as static utility classes.</p>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#langstring.utils.validators.T" title="langstring.utils.validators.T"><code class="xref py py-obj docutils literal notranslate"><span class="pre">T</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#langstring.utils.validators.FlagValidator" title="langstring.utils.validators.FlagValidator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FlagValidator</span></code></a></p></td>
+<td><p>A utility class for validating and transforming text and language arguments based on configuration flags.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#langstring.utils.validators.TypeValidator" title="langstring.utils.validators.TypeValidator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TypeValidator</span></code></a></p></td>
+<td><p>A utility class for validating the types of arguments passed to functions and methods.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="langstring.utils.validators.T">
+<span class="sig-prename descclassname"><span class="pre">langstring.utils.validators.</span></span><span class="sig-name descname"><span class="pre">T</span></span><a class="headerlink" href="#langstring.utils.validators.T" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="langstring.utils.validators.FlagValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langstring.utils.validators.</span></span><span class="sig-name descname"><span class="pre">FlagValidator</span></span><a class="headerlink" href="#langstring.utils.validators.FlagValidator" title="Link to this definition"></a></dt>
+<dd><p>A utility class for validating and transforming text and language arguments based on configuration flags.</p>
+<p>The <cite>FlagValidator</cite> class provides static methods to validate and transform <cite>text</cite> and <cite>lang</cite> arguments
+according to the specified flag type. The validation rules and transformations are controlled by flags
+managed by the <cite>Controller</cite> class.</p>
+<p>The <cite>FlagValidator</cite> class is non-instantiable, emphasizing its role as a static utility class.</p>
+<p>Methods:
+- <cite>validate_flags_text(flag_type: type[Enum], text: Optional[str]) -&gt; str</cite>: Validate and transform the <cite>text</cite></p>
+<blockquote>
+<div><p>argument based on the specified flag type.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><cite>validate_flags_lang(flag_type: type[Enum], lang: Optional[str]) -&gt; Optional[str]</cite>: Validate and transform the
+<cite>lang</cite> argument based on the specified flag type.</p></li>
+</ul>
+<p>Examples:
+- Validating and transforming text:
+&gt;&gt;&gt; Controller.set_flag(GlobalFlag.STRIP_TEXT, True)
+&gt;&gt;&gt; Controller.set_flag(GlobalFlag.DEFINED_TEXT, True)
+&gt;&gt;&gt; print(FlagValidator.validate_flags_text(GlobalFlag, “  Hello  “))  # Output: Hello
+&gt;&gt;&gt; print(FlagValidator.validate_flags_text(GlobalFlag, “     “))  # Raises ValueError
+&gt;&gt;&gt; print(FlagValidator.validate_flags_text(GlobalFlag, None))  # Raises ValueError</p>
+<ul class="simple">
+<li><p>Validating and transforming language:</p></li>
+</ul>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Controller</span><span class="o">.</span><span class="n">set_flag</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="o">.</span><span class="n">STRIP_LANG</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">FlagValidator</span><span class="o">.</span><span class="n">validate_flags_lang</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="p">,</span> <span class="s2">&quot;  EN  &quot;</span><span class="p">))</span>  <span class="c1"># Output: &#39;EN&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Controller</span><span class="o">.</span><span class="n">set_flag</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="o">.</span><span class="n">LOWERCASE_LANG</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">FlagValidator</span><span class="o">.</span><span class="n">validate_flags_lang</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="p">,</span> <span class="s2">&quot;  EN  &quot;</span><span class="p">))</span>  <span class="c1"># Output: &#39;en&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Controller</span><span class="o">.</span><span class="n">set_flag</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="o">.</span><span class="n">DEFINED_LANG</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">FlagValidator</span><span class="o">.</span><span class="n">validate_flags_lang</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="p">,</span> <span class="s2">&quot;  &quot;</span><span class="p">))</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>  <span class="c1"># Output: Invalid &#39;lang&#39; value received (&#39;  &#39;). &#39;LangStringFlag.DEFINED_LANG&#39; is enabled.</span>
+<span class="go">                  # Expected non-empty &#39;str&#39; or &#39;str&#39; with non-space characters.</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="langstring.utils.validators.FlagValidator.validate_flags_text">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_flags_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flag_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langstring.utils.validators.FlagValidator.validate_flags_text" title="Link to this definition"></a></dt>
+<dd><p>Validate and transform the ‘text’ based on the specified flag type.</p>
+<p>This method ensures that the ‘text’ argument adheres to the constraints defined by various flags such as
+<cite>STRIP_TEXT</cite> and <cite>DEFINED_TEXT</cite>. If <cite>DEFINED_TEXT</cite> is enabled, it ensures that ‘text’ is a non-empty string.
+Additionally, it can strip whitespace from the ‘text’ based on the <cite>STRIP_TEXT</cite> flag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flag_type</strong> (<em>type</em><em>[</em><em>Union</em><em>[</em><a class="reference internal" href="../../flags/index.html#langstring.flags.GlobalFlag" title="langstring.flags.GlobalFlag"><em>GlobalFlag</em></a><em>, </em><a class="reference internal" href="../../flags/index.html#langstring.flags.LangStringFlag" title="langstring.flags.LangStringFlag"><em>LangStringFlag</em></a><em>, </em><a class="reference internal" href="../../flags/index.html#langstring.flags.SetLangStringFlag" title="langstring.flags.SetLangStringFlag"><em>SetLangStringFlag</em></a><em>, </em><a class="reference internal" href="../../flags/index.html#langstring.flags.MultiLangStringFlag" title="langstring.flags.MultiLangStringFlag"><em>MultiLangStringFlag</em></a><em>]</em><em>]</em>) – The type of flags to be used for validation.</p></li>
+<li><p><strong>text</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – The text to be validated and transformed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The validated and transformed text.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>TypeError</strong> – If ‘flag_type’ is not an instance of type or ‘text’ is not a string or ‘None’.</p></li>
+<li><p><strong>ValueError</strong> – If the text does not meet the criteria specified by the control flags.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Controller</span><span class="o">.</span><span class="n">set_flag</span><span class="p">(</span><span class="n">GlobalFlag</span><span class="o">.</span><span class="n">STRIP_TEXT</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Controller</span><span class="o">.</span><span class="n">set_flag</span><span class="p">(</span><span class="n">GlobalFlag</span><span class="o">.</span><span class="n">DEFINED_TEXT</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">FlagValidator</span><span class="o">.</span><span class="n">validate_flags_text</span><span class="p">(</span><span class="n">GlobalFlag</span><span class="p">,</span> <span class="s2">&quot;  Hello  &quot;</span><span class="p">))</span>  <span class="c1"># Output: Hello</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">FlagValidator</span><span class="o">.</span><span class="n">validate_flags_text</span><span class="p">(</span><span class="n">GlobalFlag</span><span class="p">,</span> <span class="s2">&quot;     &quot;</span><span class="p">))</span>  <span class="c1"># Raises ValueError</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">FlagValidator</span><span class="o">.</span><span class="n">validate_flags_text</span><span class="p">(</span><span class="n">GlobalFlag</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>  <span class="c1"># Raises ValueError</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langstring.utils.validators.FlagValidator.validate_flags_lang">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_flags_lang</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flag_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langstring.utils.validators.FlagValidator.validate_flags_lang" title="Link to this definition"></a></dt>
+<dd><p>Validate and transform the ‘lang’ argument based on the specified flags.</p>
+<p>This method ensures that the ‘lang’ argument adheres to the constraints defined by various flags such as
+<cite>STRIP_LANG</cite>, <cite>LOWERCASE_LANG</cite>, <cite>DEFINED_LANG</cite>, and <cite>VALID_LANG</cite>. If <cite>DEFINED_LANG</cite> is enabled, it ensures
+that ‘lang’ is a non-empty string. If <cite>VALID_LANG</cite> is enabled, it verifies that ‘lang’ is a valid language code.
+Additionally, it can strip whitespace and convert the language code to lowercase based on the corresp. flags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flag_type</strong> (<em>type</em><em>[</em><em>Union</em><em>[</em><a class="reference internal" href="../../flags/index.html#langstring.flags.GlobalFlag" title="langstring.flags.GlobalFlag"><em>GlobalFlag</em></a><em>, </em><a class="reference internal" href="../../flags/index.html#langstring.flags.LangStringFlag" title="langstring.flags.LangStringFlag"><em>LangStringFlag</em></a><em>, </em><a class="reference internal" href="../../flags/index.html#langstring.flags.SetLangStringFlag" title="langstring.flags.SetLangStringFlag"><em>SetLangStringFlag</em></a><em>, </em><a class="reference internal" href="../../flags/index.html#langstring.flags.MultiLangStringFlag" title="langstring.flags.MultiLangStringFlag"><em>MultiLangStringFlag</em></a><em>]</em><em>]</em>) – The type of flags to be used for validation, which should be one of the flag enums.</p></li>
+<li><p><strong>lang</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – The language string to be validated and transformed. It can be None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The transformed language string if valid; otherwise, it raises an appropriate error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If ‘lang’ is empty and <cite>DEFINED_LANG</cite> is enabled, or if ‘lang’ is invalid and <cite>VALID_LANG</cite>
+is enabled.</p></li>
+<li><p><strong>TypeError</strong> – If ‘flag_type’ is not of type ‘Enum’, or if ‘lang’ is not of type ‘str’ or ‘None’.</p></li>
+<li><p><strong>ImportError</strong> – If ‘VALID_LANG’ is enabled but the ‘langcodes’ library is not installed and
+<cite>ENFORCE_EXTRA_DEPEND</cite> is enabled.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Controller</span><span class="o">.</span><span class="n">set_flag</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="o">.</span><span class="n">STRIP_LANG</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">FlagValidator</span><span class="o">.</span><span class="n">validate_flags_lang</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="p">,</span> <span class="s2">&quot;  EN  &quot;</span><span class="p">))</span>  <span class="c1"># Output: &#39;EN&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Controller</span><span class="o">.</span><span class="n">set_flag</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="o">.</span><span class="n">LOWERCASE_LANG</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">FlagValidator</span><span class="o">.</span><span class="n">validate_flags_lang</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="p">,</span> <span class="s2">&quot;  EN  &quot;</span><span class="p">))</span>  <span class="c1"># Output: &#39;en&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Controller</span><span class="o">.</span><span class="n">set_flag</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="o">.</span><span class="n">DEFINED_LANG</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">FlagValidator</span><span class="o">.</span><span class="n">validate_flags_lang</span><span class="p">(</span><span class="n">LangStringFlag</span><span class="p">,</span> <span class="s2">&quot;  &quot;</span><span class="p">))</span>
+<span class="gp">... </span><span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>  <span class="c1"># Output: Invalid &#39;lang&#39; value received (&#39;  &#39;). &#39;LangStringFlag.DEFINED_LANG&#39; is enabled.</span>
+<span class="go">                  # Expected non-empty &#39;str&#39; or &#39;str&#39; with non-space characters.</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="langstring.utils.validators.TypeValidator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langstring.utils.validators.</span></span><span class="sig-name descname"><span class="pre">TypeValidator</span></span><a class="headerlink" href="#langstring.utils.validators.TypeValidator" title="Link to this definition"></a></dt>
+<dd><p>A utility class for validating the types of arguments passed to functions and methods.</p>
+<p>The <cite>TypeValidator</cite> class provides static methods to validate single arguments, iterables, and to apply type
+validation decorators to functions or methods.
+The validation ensures that the arguments match the specified type hints.</p>
+<p>The <cite>TypeValidator</cite> class is non-instantiable, emphasizing its role as a static utility class.</p>
+<p>Methods:
+- <cite>_check_arg(arg: Any, hint: type[Any]) -&gt; bool</cite>: Check if the argument matches the type hint.
+- <cite>validate_type_decorator(func: Callable[…, T]) -&gt; Callable[…, T]</cite>: Decorator to validate the types of</p>
+<blockquote>
+<div><p>arguments passed to a function or method based on their type hints.</p>
+</div></blockquote>
+<ul>
+<li><dl class="simple">
+<dt><cite>validate_type_single(arg: Any, arg_exp_type: type, optional: bool = False) -&gt; None</cite>: Validate that a single</dt><dd><p>argument matches the expected type.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a href="#id1"><span class="problematic" id="id2">`</span></a>validate_type_iterable(arg: Any, arg_exp_type: type, arg_content_exp_type: type, optional: bool = False)</dt><dd><p>-&gt; None`:</p>
+</dd>
+</dl>
+<p>Validate that an argument is an iterable of the expected type and that its contents match the expected
+content type.</p>
+</li>
+</ul>
+<p>Examples:
+- Using the type validation decorator:
+&gt;&gt;&gt; &#64;TypeValidator.validate_type_decorator
+… def greet(name: str, age: int) -&gt; str:
+…     return f”Hello, {name}. You are {age} years old.”
+…
+&gt;&gt;&gt; print(greet(“Alice”, 30))  # Output: Hello, Alice. You are 30 years old.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@TypeValidator</span><span class="o">.</span><span class="n">validate_type_decorator</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">process_list</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">process_list</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>  <span class="c1"># Output: 6</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@TypeValidator</span><span class="o">.</span><span class="n">validate_type_decorator</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">union_example</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Received: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">union_example</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span>  <span class="c1"># Output: Received: 42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">union_example</span><span class="p">(</span><span class="s2">&quot;42&quot;</span><span class="p">))</span>  <span class="c1"># Output: Received: 42</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Validating a single argument:</p></li>
+</ul>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_single</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>  <span class="c1"># Does not raise error.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_single</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>  <span class="c1"># Raise TypeError</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_single</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">optional</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Does not raise error.</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Validating an iterable:</p></li>
+</ul>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_iterable</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>  <span class="c1"># Does not raise error.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_iterable</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">},</span> <span class="nb">set</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>  <span class="c1"># Does not raise error.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_iterable</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">},</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>  <span class="c1"># Raises TypeError</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_iterable</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">},</span> <span class="nb">set</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>  <span class="c1"># Raises TypeError</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_iterable</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">optional</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Does not raise error.</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="langstring.utils.validators.TypeValidator._check_arg">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_check_arg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langstring.utils.validators.TypeValidator._check_arg" title="Link to this definition"></a></dt>
+<dd><p>Check if the argument matches the type hint.</p>
+<p>This private method validates that the provided argument matches the specified type hint.
+It supports basic types, parameterized generics like lists and dictionaries, and unions of types.
+It is intended to be used internally by the <cite>validate_type_decorator</cite> method for argument validation.</p>
+<p>This method has functionalities that the <cite>validate_type_single</cite> and <cite>validate_type_iterable</cite> methods do
+not fully cover:
+1. <strong>Handling Union Types</strong>:</p>
+<blockquote>
+<div><p><cite>_check_arg</cite> can handle <cite>Union</cite> types, allowing for type hints that specify multiple possible
+types for an argument (e.g., <cite>Union[int, str]</cite>).</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><dl class="simple">
+<dt><strong>Parameterized Generics</strong>:</dt><dd><p><cite>_check_arg</cite> supports parameterized generics such as <cite>List[int]</cite>, <cite>Set[str]</cite>, <cite>Tuple[int, str]</cite>,
+and <cite>Dict[str, int]</cite>. It checks both the container type and the types of the items within the container.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Nested Types</strong>:</dt><dd><p><cite>_check_arg</cite> can validate more complex nested types,
+such as a list of dictionaries or a dictionary with tuple values.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arg</strong> (<em>Any</em>) – The argument to be checked.</p></li>
+<li><p><strong>hint</strong> (<em>type</em><em>[</em><em>Any</em><em>]</em>) – The expected type of the argument.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the argument matches the type hint, otherwise raises a TypeError.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>TypeError</strong> – If the argument does not match the expected type hint.</p>
+</dd>
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p># Check a simple type
+&gt;&gt;&gt; print(TypeValidator._check_arg(5, int))  # Output: True</p>
+<p># Check a union type
+&gt;&gt;&gt; print(TypeValidator._check_arg(“test”, Union[str, int]))  # Output: True</p>
+<p># Check a list of integers
+&gt;&gt;&gt; print(TypeValidator._check_arg([1, 2, 3], list[int]))  # Output: True</p>
+<p># Check a dictionary with string keys and integer values
+&gt;&gt;&gt; print(TypeValidator._check_arg({“a”: 1, “b”: 2}, dict[str, int]))  # Output: True</p>
+<p># This will raise a TypeError because the argument does not match the expected type
+&gt;&gt;&gt; print(TypeValidator._check_arg(“test”, int))  # Raises TypeError</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langstring.utils.validators.TypeValidator.validate_type_decorator">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_type_decorator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langstring.utils.validators.TypeValidator.validate_type_decorator" title="Link to this definition"></a></dt>
+<dd><p>Is a decorator to validate the types of arguments passed to a function or method based on their type hints.</p>
+<p>This method checks if each argument’s type matches its corresponding type hint. It is intended for use with
+functions or instance methods where explicit type hints are provided for all arguments.</p>
+<dl>
+<dt>Usage:</dt><dd><ul class="simple">
+<li><p>Apply this decorator to functions or instance methods that require type validation based on type hints.</p></li>
+</ul>
+</dd>
+<dt>When to Use:</dt><dd><ul class="simple">
+<li><p>Use this decorator for functions or methods where argument types need to be strictly validated.</p></li>
+<li><p>Suitable for validating primitive types (int, str, float, bool, etc.), Optional types, and Union types.</p></li>
+<li><p>Useful for parameterized generics like List[int], Set[str], etc., to ensure both the container and its</p></li>
+</ul>
+<p>contents match the specified types.
+- Appropriate for instance methods, adjusting for the ‘self’ parameter automatically.
+- Suitable for static methods but requires manual validation for class methods and setters.</p>
+</dd>
+<dt>When Not to Use:</dt><dd><ul class="simple">
+<li><p>Do not use this decorator for class methods with the ‘cls’ parameter. It doesn`t handle ‘cls’ explicitly.</p></li>
+<li><p>Avoid using this decorator for property setters.</p></li>
+<li><p>This decorator is not suitable for methods with parameters involving generic collections parameterized
+with type variables (e.g., List[T] where T is a type variable).</p></li>
+<li><p>Complex nested generics (e.g., List[Dict[str, Union[int, List[str]]]]) might not be fully validated.</p></li>
+<li><p>Specifically, cases like <cite>([“test”, 1], list, False)</cite> (List with mixed types) and nested <cite>Union</cite> within
+parameterized generics (e.g., <cite>list[Union[int, str]]</cite>) are out of scope and will not be correctly
+validated by this decorator.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>func</strong> (<em>Callable</em><em>[</em><em>...</em><em>, </em><em>T</em><em>]</em>) – The function or method to be decorated.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The decorated function or method with type validation applied.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Callable[…, T]</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>TypeError</strong> – If an argument’s type does not match its type hint.</p>
+</dd>
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@TypeValidator</span><span class="o">.</span><span class="n">validate_type_decorator</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">. You are </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>  <span class="c1"># Output: Hello, Alice. You are 30 years old.</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@TypeValidator</span><span class="o">.</span><span class="n">validate_type_decorator</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">process_list</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">process_list</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>  <span class="c1"># Output: 6</span>
+</pre></div>
+</div>
+<p># Raises TypeError because ‘age’ is expected to be an int, not a str
+&gt;&gt;&gt; greet(“Alice”, “30”)  # Raises TypeError</p>
+<p># Raises TypeError because ‘data’ is expected to be a list[int], not a list[str]
+&gt;&gt;&gt; process_list([“1”, “2”, “3”])  # Raises TypeError</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@TypeValidator</span><span class="o">.</span><span class="n">validate_type_decorator</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">union_example</span><span class="p">(</span><span class="n">value</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Received: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">union_example</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span>  <span class="c1"># Output: Received: 42</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">union_example</span><span class="p">(</span><span class="s2">&quot;42&quot;</span><span class="p">))</span>  <span class="c1"># Output: Received: 42</span>
+</pre></div>
+</div>
+<p># Raises TypeError because ‘value’ is expected to be Union[int, str], not a list
+&gt;&gt;&gt; union_example([42])  # Raises TypeError</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langstring.utils.validators.TypeValidator.validate_type_single">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_type_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg_exp_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optional</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langstring.utils.validators.TypeValidator.validate_type_single" title="Link to this definition"></a></dt>
+<dd><p>Validate that a single argument matches the expected type.</p>
+<p>This method checks if the provided argument is of the expected type. If the <cite>optional</cite> parameter is set to True,
+the argument can also be None. If the argument does not match the expected type, a TypeError is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arg</strong> (<em>Any</em>) – The argument to be checked.</p></li>
+<li><p><strong>arg_exp_type</strong> (<em>type</em>) – The expected type of the argument.</p></li>
+<li><p><strong>optional</strong> (<em>bool</em>) – If True, the argument can be None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>TypeError</strong> – If the argument does not match the expected type.</p>
+</dd>
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_single</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_single</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_single</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">optional</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p># This will raise a TypeError because the argument is not of the expected type
+&gt;&gt;&gt; TypeValidator.validate_type_single(5, str)
+# Raises TypeError: Invalid argument with value ‘5’. Expected ‘str’, but got ‘int’.</p>
+<p># This will also raise a TypeError because the argument is not of the expected type
+&gt;&gt;&gt; TypeValidator.validate_type_single(“test”, int)
+# Raises TypeError: Invalid argument with value ‘test’. Expected ‘int’, but got ‘str’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="langstring.utils.validators.TypeValidator.validate_type_iterable">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate_type_iterable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg_exp_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg_content_exp_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optional</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langstring.utils.validators.TypeValidator.validate_type_iterable" title="Link to this definition"></a></dt>
+<dd><p>Validate that an argument is an iterable of the expected type and that its contents match the expected         content type.</p>
+<p>This method checks if the provided argument is of the expected iterable type (e.g., list, set, tuple)
+and that each element within the iterable matches the expected content type.
+If the <cite>optional</cite> parameter is set to True, the argument can also be None.
+If the argument or its contents do not match the expected types, a TypeError is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arg</strong> (<em>Any</em>) – The iterable argument to be checked.</p></li>
+<li><p><strong>arg_exp_type</strong> (<em>type</em>) – The expected type of the iterable argument.</p></li>
+<li><p><strong>arg_content_exp_type</strong> (<em>type</em>) – The expected type of the elements within the iterable.</p></li>
+<li><p><strong>optional</strong> (<em>bool</em>) – If True, the argument can be None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>TypeError</strong> – If the argument or its contents do not match the expected types.</p>
+</dd>
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_iterable</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_iterable</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">},</span> <span class="nb">set</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TypeValidator</span><span class="o">.</span><span class="n">validate_type_iterable</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">optional</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p># This will raise a TypeError because the argument is not of the expected iterable type
+&gt;&gt;&gt; TypeValidator.validate_type_iterable([1, 2, 3], set, int)
+# Raises TypeError: Invalid argument with value ‘[1, 2, 3]’. Expected ‘set’, but got ‘list’.</p>
+<p># This will also raise a TypeError because the contents are not of the expected type
+&gt;&gt;&gt; TypeValidator.validate_type_iterable([1, “2”, 3], list, int)
+# Raises TypeError: Invalid argument with value ‘2’. Expected ‘int’, but got ‘str’.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../non_instantiable/index.html" class="btn btn-neutral float-left" title="langstring.utils.non_instantiable" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../controller/index.html" class="btn btn-neutral float-right" title="langstring.controller" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Pedro Paulo F. Barcelos &lt;p.p.favatobarcelos@utwente.nl&gt;.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

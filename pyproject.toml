@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "langstring"
-version = "2.0.0"
+version = "3.0.0"
 description = "LangString Python Library"
 license = "Apache-2.0"
 authors = ["Pedro Paulo F. Barcelos <p.p.favatobarcelos@utwente.nl>"]
@@ -17,8 +17,11 @@ packages = [{ include = "langstring" },
 "PyPi Project" = "https://pypi.org/project/langstring/"
 
 [tool.poetry.dependencies]
-langcodes = "^3.3.0"
-python = "^3.09"
+python = "^3.11"
+langcodes = { version = "^3.3.0", optional = true }
+
+[tool.poetry.extras]
+langcodes = ["langcodes"]
 
 [tool.poetry.group.dev.dependencies]
 # General
@@ -26,7 +29,8 @@ loguru = "^0.7.2"
 mypy = "^1.7.0"
 poetry = "^1.7.1"
 pre-commit = "^3.4.0"
-pytest = ">=7.4.2,<9.0.0"
+pytest = "^7.4.2"
+pytest-cov = "^4.1.0"
 tomli = "^2.0.1"
 # Sphynx and plugins
 sphinx = "^7.2.6"
@@ -36,7 +40,7 @@ sphinx-rtd-theme = "^2.0.0"
 sphinx-toolbox = "^3.5.0"
 myst-parser = "^2.0.0"
 # Flake8 and plugins
-flake8 = ">=6.1,<8.0"
+flake8 = "^6.1.0"
 flake8-broken-line = "^1.0.0"
 flake8-fixme = "^1.1.1"
 flake8-implicit-str-concat = "^0.4.0"
@@ -47,7 +51,7 @@ flake8-return = "^1.2.0"
 flake8-unused-arguments = "^0.0.13"
 flake8-useless-assert = "^0.4.4"
 pep8-naming = "^0.13.3"
-pydoclint = ">=0.3.8,<0.5.0"
+pydoclint = "^0.3.8"
 pydocstyle = "^6.3.0"
 pyflakes = "^3.1.0"
 tryceratops = "^2.3.2"

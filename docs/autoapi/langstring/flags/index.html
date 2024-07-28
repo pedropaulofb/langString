@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>langstring.flags &mdash; langstring  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_rtd_size.css?v=f26ae176" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/logo_resize.css?v=11130da6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="langstring.langstring" href="../langstring/index.html" />
+    <link rel="prev" title="langstring.converter" href="../converter/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            langstring
+              <img src="../../../_static/langstring-lib-logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                3.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">langstring</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modules-and-classes">Modules and Classes:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#package-contents">Package Contents:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#language-tag-handling">Language Tag Handling:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#usage">Usage:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../controller/index.html">langstring.controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../converter/index.html">langstring.converter</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">langstring.flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../langstring/index.html">langstring.langstring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multilangstring/index.html">langstring.multilangstring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../setlangstring/index.html">langstring.setlangstring</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#classes">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#id1">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">langstring</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">langstring</a></li>
+      <li class="breadcrumb-item active">langstring.flags</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/langstring/flags/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-langstring.flags">
+<span id="langstring-flags"></span><h1>langstring.flags<a class="headerlink" href="#module-langstring.flags" title="Link to this heading"></a></h1>
+<p>The <cite>flags</cite> module provides enumerations for various control flags used to configure the behavior of the <cite>LangString</cite>, <cite>SetLangString</cite>, and <cite>MultiLangString</cite> classes.</p>
+<p>This module defines several enumerations (<cite>Enums</cite>), each specifying different flags that can be set to influence the
+operation and validation rules of the respective classes. These flags offer a flexible way to enforce constraints and
+manage the behavior of multilingual text handling within the application.</p>
+<p>Enums defined in this module:</p>
+<ul class="simple">
+<li><p><strong>GlobalFlag</strong>: Flags that affect the behavior of all classes. These global flags ensure consistent behavior across
+the entire system when dealing with multilingual strings.</p></li>
+<li><p><strong>LangStringFlag</strong>: Flags specific to the <cite>LangString</cite> class. These flags control how individual language strings
+are handled, validated, and displayed.</p></li>
+<li><p><strong>SetLangStringFlag</strong>: Flags specific to the <cite>SetLangString</cite> class. These flags manage the behavior of sets of
+language strings, allowing for batch operations and validations.</p></li>
+<li><p><strong>MultiLangStringFlag</strong>: Flags specific to the <cite>MultiLangString</cite> class. These flags configure the behavior of
+multilingual string collections, enabling complex multilingual text management.</p></li>
+</ul>
+<p>Each enumeration includes flags for various aspects such as text validation, language code handling,
+and output formatting.
+These flags can be used to enforce rules like ensuring non-empty strings, validating language codes, converting language
+codes to lowercase, and controlling the inclusion of quotes and language tags in output.</p>
+<p>Using these flags, developers can customize and control the behavior of multilingual text handling classes, ensuring
+that they meet the specific needs of their applications.</p>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#langstring.flags.GlobalFlag" title="langstring.flags.GlobalFlag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GlobalFlag</span></code></a></p></td>
+<td><p>Enumeration for global control flags.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#langstring.flags.LangStringFlag" title="langstring.flags.LangStringFlag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LangStringFlag</span></code></a></p></td>
+<td><p>Enumeration for LangString control flags.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#langstring.flags.SetLangStringFlag" title="langstring.flags.SetLangStringFlag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SetLangStringFlag</span></code></a></p></td>
+<td><p>Enumeration for SetLangString control flags.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#langstring.flags.MultiLangStringFlag" title="langstring.flags.MultiLangStringFlag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MultiLangStringFlag</span></code></a></p></td>
+<td><p>Enumeration for MultiLangString control flags.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="langstring.flags.GlobalFlag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langstring.flags.</span></span><span class="sig-name descname"><span class="pre">GlobalFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langstring.flags.GlobalFlag" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Enumeration for global control flags.</p>
+<p>This enum defines various flags that can be used to configure the behavior of all classes in the multilingual text
+handling system. These flags provide a flexible way to enforce constraints and manage behavior consistently across
+different classes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DEFINED_LANG</strong> (<em>Enum</em>) – Ensures that a non-empty string is used for the ‘lang’ field of all classes.</p></li>
+<li><p><strong>DEFINED_TEXT</strong> (<em>Enum</em>) – Ensures that a non-empty string is used for the ‘text’ field of all classes.</p></li>
+<li><p><strong>ENFORCE_EXTRA_DEPEND</strong> (<em>Enum</em>) – Enforces additional dependencies required by all classes.</p></li>
+<li><p><strong>LOWERCASE_LANG</strong> (<em>Enum</em>) – Converts all language codes to lowercase.</p></li>
+<li><p><strong>METHODS_MATCH_TYPES</strong> (<em>Enum</em>) – Ensures that methods match the expected types for arguments and return values.</p></li>
+<li><p><strong>PRINT_WITH_LANG</strong> (<em>Enum</em>) – Includes language tags when printing multilingual text.</p></li>
+<li><p><strong>PRINT_WITH_QUOTES</strong> (<em>Enum</em>) – Wraps text entries in quotes when printing multilingual text.</p></li>
+<li><p><strong>STRIP_LANG</strong> (<em>Enum</em>) – Removes leading and trailing whitespace from language codes.</p></li>
+<li><p><strong>STRIP_TEXT</strong> (<em>Enum</em>) – Removes leading and trailing whitespace from text entries.</p></li>
+<li><p><strong>VALID_LANG</strong> (<em>Enum</em>) – Ensures that a valid language code string is used for the ‘lang’ field of all classes.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.GlobalFlag.DEFINED_LANG">
+<span class="sig-name descname"><span class="pre">DEFINED_LANG</span></span><a class="headerlink" href="#langstring.flags.GlobalFlag.DEFINED_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.GlobalFlag.DEFINED_TEXT">
+<span class="sig-name descname"><span class="pre">DEFINED_TEXT</span></span><a class="headerlink" href="#langstring.flags.GlobalFlag.DEFINED_TEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.GlobalFlag.ENFORCE_EXTRA_DEPEND">
+<span class="sig-name descname"><span class="pre">ENFORCE_EXTRA_DEPEND</span></span><a class="headerlink" href="#langstring.flags.GlobalFlag.ENFORCE_EXTRA_DEPEND" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.GlobalFlag.LOWERCASE_LANG">
+<span class="sig-name descname"><span class="pre">LOWERCASE_LANG</span></span><a class="headerlink" href="#langstring.flags.GlobalFlag.LOWERCASE_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.GlobalFlag.METHODS_MATCH_TYPES">
+<span class="sig-name descname"><span class="pre">METHODS_MATCH_TYPES</span></span><a class="headerlink" href="#langstring.flags.GlobalFlag.METHODS_MATCH_TYPES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.GlobalFlag.PRINT_WITH_LANG">
+<span class="sig-name descname"><span class="pre">PRINT_WITH_LANG</span></span><a class="headerlink" href="#langstring.flags.GlobalFlag.PRINT_WITH_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.GlobalFlag.PRINT_WITH_QUOTES">
+<span class="sig-name descname"><span class="pre">PRINT_WITH_QUOTES</span></span><a class="headerlink" href="#langstring.flags.GlobalFlag.PRINT_WITH_QUOTES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.GlobalFlag.STRIP_LANG">
+<span class="sig-name descname"><span class="pre">STRIP_LANG</span></span><a class="headerlink" href="#langstring.flags.GlobalFlag.STRIP_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.GlobalFlag.STRIP_TEXT">
+<span class="sig-name descname"><span class="pre">STRIP_TEXT</span></span><a class="headerlink" href="#langstring.flags.GlobalFlag.STRIP_TEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.GlobalFlag.VALID_LANG">
+<span class="sig-name descname"><span class="pre">VALID_LANG</span></span><a class="headerlink" href="#langstring.flags.GlobalFlag.VALID_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="langstring.flags.LangStringFlag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langstring.flags.</span></span><span class="sig-name descname"><span class="pre">LangStringFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langstring.flags.LangStringFlag" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Enumeration for LangString control flags.</p>
+<p>This enum defines various flags that can be used to configure the behavior of the LangString class. These flags
+provide a flexible way to enforce constraints and manage the behavior of multilingual text handling within the
+LangString class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DEFINED_LANG</strong> (<em>Enum</em>) – Ensures that a non-empty string is used for the ‘lang’ field of a LangString.</p></li>
+<li><p><strong>DEFINED_TEXT</strong> (<em>Enum</em>) – Ensures that a non-empty string is used for the ‘text’ field of a LangString.</p></li>
+<li><p><strong>LOWERCASE_LANG</strong> (<em>Enum</em>) – Converts all language codes to lowercase within a LangString.</p></li>
+<li><p><strong>METHODS_MATCH_TYPES</strong> (<em>Enum</em>) – Ensures that methods match the expected types for arguments and return values within
+a LangString.</p></li>
+<li><p><strong>PRINT_WITH_LANG</strong> (<em>Enum</em>) – Includes language tags when printing a LangString.</p></li>
+<li><p><strong>PRINT_WITH_QUOTES</strong> (<em>Enum</em>) – Wraps text entries in quotes when printing a LangString.</p></li>
+<li><p><strong>STRIP_LANG</strong> (<em>Enum</em>) – Removes leading and trailing whitespace from language codes within a LangString.</p></li>
+<li><p><strong>STRIP_TEXT</strong> (<em>Enum</em>) – Removes leading and trailing whitespace from text entries within a LangString.</p></li>
+<li><p><strong>VALID_LANG</strong> (<em>Enum</em>) – Ensures that a valid language code string is used for the ‘lang’ field of a LangString.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.LangStringFlag.DEFINED_LANG">
+<span class="sig-name descname"><span class="pre">DEFINED_LANG</span></span><a class="headerlink" href="#langstring.flags.LangStringFlag.DEFINED_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.LangStringFlag.DEFINED_TEXT">
+<span class="sig-name descname"><span class="pre">DEFINED_TEXT</span></span><a class="headerlink" href="#langstring.flags.LangStringFlag.DEFINED_TEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.LangStringFlag.LOWERCASE_LANG">
+<span class="sig-name descname"><span class="pre">LOWERCASE_LANG</span></span><a class="headerlink" href="#langstring.flags.LangStringFlag.LOWERCASE_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.LangStringFlag.METHODS_MATCH_TYPES">
+<span class="sig-name descname"><span class="pre">METHODS_MATCH_TYPES</span></span><a class="headerlink" href="#langstring.flags.LangStringFlag.METHODS_MATCH_TYPES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.LangStringFlag.PRINT_WITH_LANG">
+<span class="sig-name descname"><span class="pre">PRINT_WITH_LANG</span></span><a class="headerlink" href="#langstring.flags.LangStringFlag.PRINT_WITH_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.LangStringFlag.PRINT_WITH_QUOTES">
+<span class="sig-name descname"><span class="pre">PRINT_WITH_QUOTES</span></span><a class="headerlink" href="#langstring.flags.LangStringFlag.PRINT_WITH_QUOTES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.LangStringFlag.STRIP_LANG">
+<span class="sig-name descname"><span class="pre">STRIP_LANG</span></span><a class="headerlink" href="#langstring.flags.LangStringFlag.STRIP_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.LangStringFlag.STRIP_TEXT">
+<span class="sig-name descname"><span class="pre">STRIP_TEXT</span></span><a class="headerlink" href="#langstring.flags.LangStringFlag.STRIP_TEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.LangStringFlag.VALID_LANG">
+<span class="sig-name descname"><span class="pre">VALID_LANG</span></span><a class="headerlink" href="#langstring.flags.LangStringFlag.VALID_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="langstring.flags.SetLangStringFlag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langstring.flags.</span></span><span class="sig-name descname"><span class="pre">SetLangStringFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langstring.flags.SetLangStringFlag" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Enumeration for SetLangString control flags.</p>
+<p>This enum defines various flags that can be used to configure the behavior of the SetLangString class. These flags
+provide a flexible way to enforce constraints and manage the behavior of multilingual text handling within the
+SetLangString class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DEFINED_LANG</strong> (<em>Enum</em>) – Ensures that a non-empty string is used for the ‘lang’ field of a SetLangString.</p></li>
+<li><p><strong>DEFINED_TEXT</strong> (<em>Enum</em>) – Ensures that a non-empty string is used for the ‘text’ field of a SetLangString.</p></li>
+<li><p><strong>LOWERCASE_LANG</strong> (<em>Enum</em>) – Converts all language codes to lowercase within a SetLangString.</p></li>
+<li><p><strong>METHODS_MATCH_TYPES</strong> (<em>Enum</em>) – Ensures that methods match the expected types for arguments and return values within
+a SetLangString.</p></li>
+<li><p><strong>PRINT_WITH_LANG</strong> (<em>Enum</em>) – Includes language tags when printing a SetLangString.</p></li>
+<li><p><strong>PRINT_WITH_QUOTES</strong> (<em>Enum</em>) – Wraps text entries in quotes when printing a SetLangString.</p></li>
+<li><p><strong>STRIP_LANG</strong> (<em>Enum</em>) – Removes leading and trailing whitespace from language codes within a SetLangString.</p></li>
+<li><p><strong>STRIP_TEXT</strong> (<em>Enum</em>) – Removes leading and trailing whitespace from text entries within a SetLangString.</p></li>
+<li><p><strong>VALID_LANG</strong> (<em>Enum</em>) – Ensures that a valid language code string is used for the ‘lang’ field of a SetLangString.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.SetLangStringFlag.DEFINED_LANG">
+<span class="sig-name descname"><span class="pre">DEFINED_LANG</span></span><a class="headerlink" href="#langstring.flags.SetLangStringFlag.DEFINED_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.SetLangStringFlag.DEFINED_TEXT">
+<span class="sig-name descname"><span class="pre">DEFINED_TEXT</span></span><a class="headerlink" href="#langstring.flags.SetLangStringFlag.DEFINED_TEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.SetLangStringFlag.LOWERCASE_LANG">
+<span class="sig-name descname"><span class="pre">LOWERCASE_LANG</span></span><a class="headerlink" href="#langstring.flags.SetLangStringFlag.LOWERCASE_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.SetLangStringFlag.METHODS_MATCH_TYPES">
+<span class="sig-name descname"><span class="pre">METHODS_MATCH_TYPES</span></span><a class="headerlink" href="#langstring.flags.SetLangStringFlag.METHODS_MATCH_TYPES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.SetLangStringFlag.PRINT_WITH_LANG">
+<span class="sig-name descname"><span class="pre">PRINT_WITH_LANG</span></span><a class="headerlink" href="#langstring.flags.SetLangStringFlag.PRINT_WITH_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.SetLangStringFlag.PRINT_WITH_QUOTES">
+<span class="sig-name descname"><span class="pre">PRINT_WITH_QUOTES</span></span><a class="headerlink" href="#langstring.flags.SetLangStringFlag.PRINT_WITH_QUOTES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.SetLangStringFlag.STRIP_LANG">
+<span class="sig-name descname"><span class="pre">STRIP_LANG</span></span><a class="headerlink" href="#langstring.flags.SetLangStringFlag.STRIP_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.SetLangStringFlag.STRIP_TEXT">
+<span class="sig-name descname"><span class="pre">STRIP_TEXT</span></span><a class="headerlink" href="#langstring.flags.SetLangStringFlag.STRIP_TEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.SetLangStringFlag.VALID_LANG">
+<span class="sig-name descname"><span class="pre">VALID_LANG</span></span><a class="headerlink" href="#langstring.flags.SetLangStringFlag.VALID_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="langstring.flags.MultiLangStringFlag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">langstring.flags.</span></span><span class="sig-name descname"><span class="pre">MultiLangStringFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#langstring.flags.MultiLangStringFlag" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Enumeration for MultiLangString control flags.</p>
+<p>This enum defines various flags that can be used to configure the behavior of the MultiLangString class. These flags
+provide a flexible way to enforce constraints and manage the behavior of multilingual text handling within the
+MultiLangString class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DEFINED_LANG</strong> (<em>Enum</em>) – Ensures that a non-empty string is used for the ‘lang’ field of a MultiLangString.</p></li>
+<li><p><strong>DEFINED_TEXT</strong> (<em>Enum</em>) – Ensures that a non-empty string is used for the ‘text’ field of a MultiLangString.</p></li>
+<li><p><strong>LOWERCASE_LANG</strong> (<em>Enum</em>) – Converts all language codes to lowercase within a MultiLangString.</p></li>
+<li><p><strong>PRINT_WITH_LANG</strong> (<em>Enum</em>) – Includes language tags when printing a MultiLangString.</p></li>
+<li><p><strong>PRINT_WITH_QUOTES</strong> (<em>Enum</em>) – Wraps text entries in quotes when printing a MultiLangString.</p></li>
+<li><p><strong>STRIP_LANG</strong> (<em>Enum</em>) – Removes leading and trailing whitespace from language codes within a MultiLangString.</p></li>
+<li><p><strong>STRIP_TEXT</strong> (<em>Enum</em>) – Removes leading and trailing whitespace from text entries within a MultiLangString.</p></li>
+<li><p><strong>VALID_LANG</strong> (<em>Enum</em>) – Ensures that a valid language code string is used for the ‘lang’ field of a MultiLangString.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.MultiLangStringFlag.DEFINED_LANG">
+<span class="sig-name descname"><span class="pre">DEFINED_LANG</span></span><a class="headerlink" href="#langstring.flags.MultiLangStringFlag.DEFINED_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.MultiLangStringFlag.DEFINED_TEXT">
+<span class="sig-name descname"><span class="pre">DEFINED_TEXT</span></span><a class="headerlink" href="#langstring.flags.MultiLangStringFlag.DEFINED_TEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.MultiLangStringFlag.LOWERCASE_LANG">
+<span class="sig-name descname"><span class="pre">LOWERCASE_LANG</span></span><a class="headerlink" href="#langstring.flags.MultiLangStringFlag.LOWERCASE_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.MultiLangStringFlag.PRINT_WITH_LANG">
+<span class="sig-name descname"><span class="pre">PRINT_WITH_LANG</span></span><a class="headerlink" href="#langstring.flags.MultiLangStringFlag.PRINT_WITH_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.MultiLangStringFlag.PRINT_WITH_QUOTES">
+<span class="sig-name descname"><span class="pre">PRINT_WITH_QUOTES</span></span><a class="headerlink" href="#langstring.flags.MultiLangStringFlag.PRINT_WITH_QUOTES" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.MultiLangStringFlag.STRIP_LANG">
+<span class="sig-name descname"><span class="pre">STRIP_LANG</span></span><a class="headerlink" href="#langstring.flags.MultiLangStringFlag.STRIP_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.MultiLangStringFlag.STRIP_TEXT">
+<span class="sig-name descname"><span class="pre">STRIP_TEXT</span></span><a class="headerlink" href="#langstring.flags.MultiLangStringFlag.STRIP_TEXT" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="langstring.flags.MultiLangStringFlag.VALID_LANG">
+<span class="sig-name descname"><span class="pre">VALID_LANG</span></span><a class="headerlink" href="#langstring.flags.MultiLangStringFlag.VALID_LANG" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../converter/index.html" class="btn btn-neutral float-left" title="langstring.converter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../langstring/index.html" class="btn btn-neutral float-right" title="langstring.langstring" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Pedro Paulo F. Barcelos &lt;p.p.favatobarcelos@utwente.nl&gt;.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

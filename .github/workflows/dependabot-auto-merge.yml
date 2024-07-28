@@ -13,4 +13,4 @@ jobs:
       with:
         target: all
         botName: dependabot
-        github-token: ${{ secrets.SECRET_AUTO_MERGE }}
+        github-token: ${{ secrets.AUTO_MERGE_LANGSTRING_DEPENDABOT }}

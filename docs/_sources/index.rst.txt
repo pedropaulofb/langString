@@ -1,6 +1,12 @@
 Welcome to langstring's code documentation!
 =============================================
 
+.. raw:: html
+
+    <div class="custom-logo">
+        <img src="../resources/langstring-lib-logo.png" alt="Library Logo">
+    </div>
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

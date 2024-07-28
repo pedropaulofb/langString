@@ -1,0 +1,174 @@
+<svg width="352pt" height="698pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" style="overflow: hidden; "><g id="viewport-20240727212654787" class="svg-pan-zoom_viewport" transform="matrix(1.2762398695796842,0,0,1.2762398695796842,10.965266886190342,18.274009566017853)" style="transform: matrix(1.27624, 0, 0, 1.27624, 10.9653, 18.274);">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 694)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-694 348,-694 348,4 -4,4"></polygon>
+<!-- langstring_utils_validators -->
+<g id="node1" class="node">
+<title>langstring_utils_validators</title>
+<polygon fill="#e1d789" stroke="black" points="145.4,-472 86.6,-472 86.6,-436 145.4,-436 145.4,-472"></polygon>
+<text text-anchor="middle" x="116" y="-451" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">validators</text>
+</g>
+<!-- langstring_langstring -->
+<g id="node4" class="node">
+<title>langstring_langstring</title>
+<polygon fill="#89e189" stroke="black" points="225.68,-363 166.32,-363 166.32,-327 225.68,-327 225.68,-363"></polygon>
+<text text-anchor="middle" x="196" y="-342" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">langstring</text>
+</g>
+<!-- langstring_utils_validators&#45;&gt;langstring_langstring -->
+<g id="edge18" class="edge">
+<title>langstring_utils_validators-&gt;langstring_langstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M128.85,-435.81C141.68,-418.65 161.57,-392.05 176.37,-372.25"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="179,-374.59 182.18,-364.48 173.39,-370.4 179,-374.59"></polygon>
+</g>
+<!-- langstring_setlangstring -->
+<g id="node5" class="node">
+<title>langstring_setlangstring</title>
+<polygon fill="#89e189" stroke="black" points="304.35,-254 231.65,-254 231.65,-218 304.35,-218 304.35,-254"></polygon>
+<text text-anchor="middle" x="268" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">setlangstring</text>
+</g>
+<!-- langstring_utils_validators&#45;&gt;langstring_setlangstring -->
+<g id="edge20" class="edge">
+<title>langstring_utils_validators-&gt;langstring_setlangstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M145.74,-438.05C173,-422.82 212.46,-396.69 235,-363 254.74,-333.5 262.68,-292.81 265.87,-265.74"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="269.33,-266.31 266.86,-256 262.36,-265.6 269.33,-266.31"></polygon>
+</g>
+<!-- langstring_multilangstring -->
+<g id="node6" class="node">
+<title>langstring_multilangstring</title>
+<polygon fill="#89e189" stroke="black" points="170.24,-145 89.76,-145 89.76,-109 170.24,-109 170.24,-145"></polygon>
+<text text-anchor="middle" x="130" y="-124" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">multilangstring</text>
+</g>
+<!-- langstring_utils_validators&#45;&gt;langstring_multilangstring -->
+<g id="edge19" class="edge">
+<title>langstring_utils_validators-&gt;langstring_multilangstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M105.62,-435.5C94.37,-414.85 78,-379.12 78,-346 78,-346 78,-346 78,-235 78,-205.36 94.34,-175.32 108.7,-154.65"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="111.48,-156.79 114.54,-146.64 105.82,-152.67 111.48,-156.79"></polygon>
+</g>
+<!-- langstring_converter -->
+<g id="node7" class="node">
+<title>langstring_converter</title>
+<polygon fill="#ca89e1" stroke="black" points="243.84,-36 186.16,-36 186.16,0 243.84,0 243.84,-36"></polygon>
+<text text-anchor="middle" x="215" y="-15" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">converter</text>
+</g>
+<!-- langstring_utils_validators&#45;&gt;langstring_converter -->
+<g id="edge17" class="edge">
+<title>langstring_utils_validators-&gt;langstring_converter</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M92.6,-435.73C69.62,-416.6 38,-383.47 38,-346 38,-346 38,-346 38,-290 38,-207.32 33.88,-176.95 81,-109 104.43,-75.22 145.01,-50.6 175.39,-35.73"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="176.61,-39.03 184.16,-31.59 173.62,-32.7 176.61,-39.03"></polygon>
+</g>
+<!-- langstring_controller -->
+<g id="node2" class="node">
+<title>langstring_controller</title>
+<polygon fill="#58bdd6" stroke="black" points="239.56,-581 182.44,-581 182.44,-545 239.56,-545 239.56,-581"></polygon>
+<text text-anchor="middle" x="211" y="-560" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">controller</text>
+</g>
+<!-- langstring_controller&#45;&gt;langstring_utils_validators -->
+<g id="edge5" class="edge">
+<title>langstring_controller-&gt;langstring_utils_validators</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M195.74,-544.81C180.36,-527.49 156.46,-500.57 138.83,-480.71"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="141.59,-478.55 132.33,-473.39 136.35,-483.2 141.59,-478.55"></polygon>
+</g>
+<!-- langstring_controller&#45;&gt;langstring_langstring -->
+<g id="edge2" class="edge">
+<title>langstring_controller-&gt;langstring_langstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M209.8,-544.69C207.23,-507.64 201.16,-420.35 198,-374.8"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="201.51,-374.79 197.32,-365.05 194.52,-375.27 201.51,-374.79"></polygon>
+</g>
+<!-- langstring_controller&#45;&gt;langstring_setlangstring -->
+<g id="edge4" class="edge">
+<title>langstring_controller-&gt;langstring_setlangstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M216.72,-544.5C230.35,-501.79 264.47,-388.54 276,-291 276.97,-282.78 276.35,-273.88 275.11,-265.73"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="278.58,-265.28 273.27,-256.11 271.71,-266.59 278.58,-265.28"></polygon>
+</g>
+<!-- langstring_controller&#45;&gt;langstring_multilangstring -->
+<g id="edge3" class="edge">
+<title>langstring_controller-&gt;langstring_multilangstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M203.23,-544.82C180.54,-494.64 116,-351.4 116,-346 116,-346 116,-346 116,-235 116,-208.25 120.35,-178.06 124.21,-156.58"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="127.61,-157.44 126.01,-146.97 120.73,-156.15 127.61,-157.44"></polygon>
+</g>
+<!-- langstring_flags -->
+<g id="node3" class="node">
+<title>langstring_flags</title>
+<polygon fill="#58bdd6" stroke="black" points="238,-690 184,-690 184,-654 238,-654 238,-690"></polygon>
+<text text-anchor="middle" x="211" y="-669" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">flags</text>
+</g>
+<!-- langstring_flags&#45;&gt;langstring_utils_validators -->
+<g id="edge10" class="edge">
+<title>langstring_flags-&gt;langstring_utils_validators</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M203.39,-653.69C186.99,-616.4 148.21,-528.23 128.28,-482.93"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="131.55,-481.66 124.32,-473.92 125.14,-484.48 131.55,-481.66"></polygon>
+</g>
+<!-- langstring_flags&#45;&gt;langstring_controller -->
+<g id="edge6" class="edge">
+<title>langstring_flags-&gt;langstring_controller</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M211,-653.81C211,-637.35 211,-612.21 211,-592.72"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="214.5,-592.81 211,-582.81 207.5,-592.81 214.5,-592.81"></polygon>
+</g>
+<!-- langstring_flags&#45;&gt;langstring_langstring -->
+<g id="edge7" class="edge">
+<title>langstring_flags-&gt;langstring_langstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M238.48,-655.59C266.54,-637.59 306,-604.99 306,-564 306,-564 306,-564 306,-508 306,-451.6 259.8,-400.26 227.28,-371.12"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="229.62,-368.51 219.78,-364.59 225.03,-373.79 229.62,-368.51"></polygon>
+</g>
+<!-- langstring_flags&#45;&gt;langstring_setlangstring -->
+<g id="edge9" class="edge">
+<title>langstring_flags-&gt;langstring_setlangstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M238.24,-662.75C277.15,-649.09 344,-617.79 344,-564 344,-564 344,-564 344,-344 344,-311.36 320.2,-281.74 299.24,-261.98"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="301.82,-259.6 292.04,-255.51 297.13,-264.8 301.82,-259.6"></polygon>
+</g>
+<!-- langstring_flags&#45;&gt;langstring_multilangstring -->
+<g id="edge8" class="edge">
+<title>langstring_flags-&gt;langstring_multilangstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M183.85,-669.57C126.86,-664.96 0,-645.53 0,-564 0,-564 0,-564 0,-290 0,-230.33 54.32,-180.11 92.73,-152.06"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="94.62,-155.01 100.75,-146.37 90.57,-149.3 94.62,-155.01"></polygon>
+</g>
+<!-- langstring_langstring&#45;&gt;langstring_setlangstring -->
+<g id="edge13" class="edge">
+<title>langstring_langstring-&gt;langstring_setlangstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M207.57,-326.81C219.01,-309.81 236.69,-283.54 249.97,-263.79"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="252.85,-265.78 255.53,-255.53 247.04,-261.87 252.85,-265.78"></polygon>
+</g>
+<!-- langstring_langstring&#45;&gt;langstring_multilangstring -->
+<g id="edge12" class="edge">
+<title>langstring_langstring-&gt;langstring_multilangstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M189.98,-326.87C186.4,-316.52 181.82,-303.04 178,-291 163.08,-243.91 147.14,-188.69 137.9,-156.12"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="141.36,-155.47 135.27,-146.8 134.62,-157.38 141.36,-155.47"></polygon>
+</g>
+<!-- langstring_langstring&#45;&gt;langstring_converter -->
+<g id="edge11" class="edge">
+<title>langstring_langstring-&gt;langstring_converter</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M197.02,-326.53C200.13,-273.39 209.48,-113.36 213.33,-47.64"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="216.81,-48.01 213.9,-37.83 209.82,-47.61 216.81,-48.01"></polygon>
+</g>
+<!-- langstring_setlangstring&#45;&gt;langstring_multilangstring -->
+<g id="edge16" class="edge">
+<title>langstring_setlangstring-&gt;langstring_multilangstring</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M245.52,-217.57C222.67,-199.85 187.06,-172.25 161.42,-152.36"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="163.83,-149.8 153.79,-146.44 159.54,-155.34 163.83,-149.8"></polygon>
+</g>
+<!-- langstring_setlangstring&#45;&gt;langstring_converter -->
+<g id="edge15" class="edge">
+<title>langstring_setlangstring-&gt;langstring_converter</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M267.46,-217.88C266.07,-187.68 261.18,-123.26 244,-72 241.08,-63.29 236.76,-54.33 232.34,-46.32"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="235.48,-44.75 227.43,-37.87 229.43,-48.27 235.48,-44.75"></polygon>
+</g>
+<!-- langstring_multilangstring&#45;&gt;langstring_converter -->
+<g id="edge14" class="edge">
+<title>langstring_multilangstring-&gt;langstring_converter</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" d="M143.66,-108.81C157.29,-91.65 178.41,-65.05 194.15,-45.25"></path>
+<polygon fill="#000000" stroke="#606060" stroke-width="1.1" points="196.86,-47.46 200.34,-37.45 191.38,-43.11 196.86,-47.46"></polygon>
+</g>
+<!-- langcodes -->
+<g id="node8" class="node">
+<title>langcodes</title>
+<polygon fill="#c04040" stroke="black" points="89.8,-581 86.8,-585 65.8,-585 62.8,-581 28.2,-581 28.2,-545 89.8,-545 89.8,-581"></polygon>
+<text text-anchor="middle" x="59" y="-560" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#ffffff">langcodes</text>
+</g>
+<!-- langcodes&#45;&gt;langstring_utils_validators -->
+<g id="edge1" class="edge">
+<title>langcodes-&gt;langstring_utils_validators</title>
+<path fill="none" stroke="#606060" stroke-width="1.1" stroke-dasharray="5,2" d="M68.16,-544.81C77.13,-527.96 90.95,-502.02 101.44,-482.34"></path>
+<polygon fill="#c04040" stroke="#606060" stroke-width="1.1" points="104.47,-484.09 106.08,-473.62 98.29,-480.8 104.47,-484.09"></polygon>
+</g>
+</g>
+</g></svg>

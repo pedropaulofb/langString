@@ -20,7 +20,7 @@ identifiers:
 repository-code: 'https://github.com/pedropaulofb/langstring'
 url: 'https://pedropaulofb.github.io/langstring/'
 repository-artifact: 'https://pypi.org/project/langstring/'
-abstract: A Python library that implements langstring and multiLangStrings.
+abstract: A Python library to handle langstrings and related datatypes.
 keywords:
   - langstring
   - language-representation

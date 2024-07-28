@@ -57,6 +57,11 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
+html_logo = "../resources/langstring-lib-logo.png"
 html_theme_options = {"display_version": True}
 
 sphinx_rtd_size_width = "100%"
+
+html_css_files = [
+    "logo_resize.css",
+]

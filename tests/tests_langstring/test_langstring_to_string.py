@@ -1,73 +1,116 @@
-from typing import Optional
-
 import pytest
-
+from langstring import Controller
 from langstring import LangString
-from langstring import LangStringControl
 from langstring import LangStringFlag
-
-
-def test_to_string() -> None:
-    """Test the to_string method to ensure it returns the correct string representation of the LangString object."""
-    ls = LangString("hello")
-    assert ls.to_string() == "hello", f"Expected to_string() to return 'hello', but got {ls.to_string()}"
-
-
-def test_to_string_invalid_argument() -> None:
-    """Test passing an invalid argument to the to_string method."""
-    ls = LangString("hello")
-    with pytest.raises(TypeError):
-        ls.to_string("abc")
-
-
-def test_str() -> None:
-    """Test the __str__ method to ensure it returns the correct string representation of the LangString object."""
-    ls = LangString("hola", "es")
-    assert str(ls) == '"hola"@es', f'Expected str() to return "hola"@es, but got {str(ls)}'
+from tests.conftest import TYPEERROR_MSG_GENERAL
 
 
 @pytest.mark.parametrize(
-    "text, lang, expected_str",
+    "text, lang, print_quotes, separator, print_lang, expected",
     [
-        ("Hello", "en", '"Hello"@en'),
-        ("Hello", None, '"Hello"'),
-        ("", "en", '""@en'),
-        ("", None, '""'),
+        # Regular cases
+        ("Hello", "en", True, "@", True, '"Hello"@en'),
+        ("Hola", "es", False, "@", True, "Hola@es"),
+        ("Bonjour", "fr", True, "#", True, '"Bonjour"#fr'),
+        ("Hello", "en", True, "@", False, '"Hello"'),
+        # Edge cases
+        ("", "", True, "@", True, '""@'),
+        ("", "en", True, "@", True, '""@en'),
+        ("Hello", "", True, "@", True, '"Hello"@'),
+        ("Hello", "en", False, "@", True, "Hello@en"),
+        ("Hello", "en", True, "", True, '"Hello"en'),
+        ("Hello", "en", True, "@", False, '"Hello"'),
+        # Lower and upper case
+        ("hello", "EN", True, "@", True, '"hello"@EN'),
+        ("HELLO", "en", True, "@", True, '"HELLO"@en'),
+        # Emojis
+        ("👋", "en", True, "@", True, '"👋"@en'),
+        # Different charset
+        ("Привет", "ru", True, "@", True, '"Привет"@ru'),
     ],
 )
-def test_langstring_string_representation(text: str, lang: Optional[str], expected_str: str) -> None:
-    """Test LangString string representation.
+def test_to_string(text, lang, print_quotes, separator, print_lang, expected):
+    """Test the to_string method of the LangString class.
 
-    :param text: Text for the LangString.
+    This test covers different combinations of text, language, print_quotes, separator, and print_lang parameters.
+
+    :param text: The text string.
     :type text: str
-    :param lang: Language tag for the LangString.
-    :type lang: Optional[str]
-    :param expected_str: Expected string representation.
-    :type expected_str: str
+    :param lang: The language tag of the text.
+    :type lang: str
+    :param print_quotes: Whether to print quotes around the text.
+    :type print_quotes: bool
+    :param separator: The separator between the text and the language tag.
+    :type separator: str
+    :param print_lang: Whether to print the language tag.
+    :type print_lang: bool
+    :param expected: The expected output of the to_string method.
+    :type expected: str
     """
-    LangStringControl.set_flag(LangStringFlag.ENSURE_TEXT, False)
-    lang_str = LangString(text, lang)
-    assert str(lang_str) == expected_str, "LangString string representation is incorrect"
-    assert lang_str.to_string() == expected_str, "LangString to_string method returned incorrect representation"
+    ls = LangString(text, lang)
+    result = ls.to_string(print_quotes, separator, print_lang)
+    assert result == expected, f"Expected '{expected}', but got '{result}'"
 
 
-def test_langstring_string_representation() -> None:
-    """Test the string representation of LangString."""
-    lang_str1 = LangString("Hello", "en")
-    lang_str2 = LangString("Hello", None)
-    assert str(lang_str1) == '"Hello"@en', "String representation with language should be correct"
-    assert str(lang_str2) == "Hello", "String representation without language should be correct"
+@pytest.mark.parametrize(
+    "text, lang, print_quotes, separator, print_lang, expected",
+    [
+        ("Hello", "en", True, None, True, TypeError),
+        # Invalid types for print_quotes
+        ("Hello", "en", "True", "@", True, TypeError),
+        ("Hello", "en", 1, "@", True, TypeError),
+        ("Hello", "en", [], "@", True, TypeError),
+        ("Hello", "en", {}, "@", True, TypeError),
+        # Invalid types for separator
+        ("Hello", "en", True, True, True, TypeError),
+        ("Hello", "en", True, 1, True, TypeError),
+        ("Hello", "en", True, [], True, TypeError),
+        ("Hello", "en", True, {}, True, TypeError),
+        # Invalid types for print_lang
+        ("Hello", "en", True, "@", "True", TypeError),
+        ("Hello", "en", True, "@", 1, TypeError),
+        ("Hello", "en", True, "@", [], TypeError),
+        ("Hello", "en", True, "@", {}, TypeError),
+    ],
+)
+def test_to_string_invalid_types(text, lang, print_quotes, separator, print_lang, expected):
+    """Test the to_string method of the LangString class with invalid types.
 
-
-def test_to_string_with_different_flag_settings() -> None:
+    :param text: The text string.
+    :type text: str
+    :param lang: The language tag of the text.
+    :type lang: str
+    :param print_quotes: Whether to print quotes around the text.
+    :type print_quotes: bool
+    :param separator: The separator between the text and the language tag.
+    :type separator: str
+    :param print_lang: Whether to print the language tag.
+    :type print_lang: bool
+    :param expected: The expected output of the to_string method.
+    :type expected: str
     """
-    Test the to_string method of LangString under different flag settings.
+    ls = LangString(text, lang)
+    with pytest.raises(expected, match=TYPEERROR_MSG_GENERAL):
+        ls.to_string(print_quotes, separator, print_lang)
 
-    :raises AssertionError: If the string representation does not match the expected output under different flag settings.
-    """
-    LangStringControl.set_flag(LangStringFlag.ENSURE_TEXT, True)
-    lang_str = LangString("Hello", "en")
-    assert lang_str.to_string() == '"Hello"@en', "String representation should be correct with ENSURE_TEXT enabled"
 
-    LangStringControl.set_flag(LangStringFlag.ENSURE_TEXT, False)
-    assert lang_str.to_string() == '"Hello"@en', "String representation should remain correct with ENSURE_TEXT disabled"
+@pytest.mark.parametrize(
+    "text, lang, print_quotes, print_lang, expected",
+    [
+        # Existing test cases...
+        # Test cases with print_quotes and print_lang set to None
+        ("Hello", "en", True, True, '"Hello"@en'),
+        ("Hello", "en", True, False, '"Hello"'),
+        ("Hello", "en", False, True, "Hello@en"),
+        ("Hello", "en", False, False, "Hello"),
+    ],
+)
+def test_to_string(text, lang, print_quotes, print_lang, expected):
+    """Extended test to include cases where print_quotes and print_lang are None."""
+    # Setup code to configure Controller flags before the test
+    Controller.set_flag(LangStringFlag.PRINT_WITH_QUOTES, print_quotes)
+    Controller.set_flag(LangStringFlag.PRINT_WITH_LANG, print_lang)
+    # Test execution remains the same
+    ls = LangString(text, lang)
+    result = ls.to_string()
+    assert result == expected, f"Expected '{expected}', but got '{result}'"

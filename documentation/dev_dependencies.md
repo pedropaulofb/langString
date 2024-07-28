@@ -1,0 +1,30 @@
+Below is the complete list of development dependencies required for developing and maintaining the LangString Python Library.
+ 
+- loguru: A library aimed at simplifying logging in Python.
+- mypy: An optional static type checker for Python.
+- poetry: Dependency management and packaging tool for Python.
+- pre-commit: A framework for managing and maintaining multi-language pre-commit hooks.
+- pytest: A framework that makes building simple and scalable test cases easy.
+- pytest-cov: Pytest plugin for measuring test coverage.
+- tomli: A TOML parser for Python.
+- sphinx: A documentation generator for Python projects.
+- sphinx-autoapi: A Sphinx extension that generates API documentation automatically.
+- sphinx-rtd-size: Adjusts font size for Sphinx Read the Docs theme.
+- sphinx-rtd-theme: A Sphinx theme for Read the Docs.
+- sphinx-toolbox: A set of utilities and extensions for Sphinx.
+- myst-parser: A parser for MyST (Markedly Structured Text) to use with Sphinx.
+- flake8: A tool for style guide enforcement and linting.
+- flake8-broken-line: A Flake8 plugin for detecting broken lines.
+- flake8-fixme: A Flake8 plugin to track FIXME, TODO, and other markers.
+- flake8-implicit-str-concat: A Flake8 plugin for implicit string concatenation.
+- flake8-noqa: A Flake8 plugin to enforce the use of # noqa comments.
+- flake8-pyproject: A Flake8 plugin to read configuration from pyproject.toml.
+- flake8-pytest-style: A Flake8 plugin for pytest-specific style checks.
+- flake8-return: A Flake8 plugin to enforce explicit return statements.
+- flake8-unused-arguments: A Flake8 plugin to find unused function arguments.
+- flake8-useless-assert: A Flake8 plugin to detect useless assert statements.
+- pep8-naming: A Flake8 plugin for checking PEP8 naming conventions.
+- pydoclint: A documentation style checker for Python.
+- pydocstyle: A tool to check compliance with Python docstring conventions.
+- pyflakes: A tool to check Python source files for errors.
+- tryceratops: A Flake8 plugin to identify overly complex try/except statements.

@@ -1,0 +1,41 @@
+digraph G {
+    concentrate = false;
+    rankdir = TB;
+    splines = true;
+    nodesep = 0.6; // Increase the horizontal separation between nodes
+    node [style=filled, fillcolor="#ffffff", fontcolor="#000000", fontname=Helvetica, fontsize=10, shape=box, fixedsize=true, width=1, height=0.5];
+    edge [color="#606060", penwidth=1.1, arrowsize=1];
+
+    // DEFINITION OF NODES
+    langstring_controller [fillcolor="#58BDD6", label="controller"];
+    langstring_flags [fillcolor="#58BDD6", label="flags"];
+
+    langstring_langstring [fillcolor="#89E189", label="langstring"];
+    langstring_setlangstring [fillcolor="#89E189", label="setlangstring"];
+    langstring_multilangstring [fillcolor="#89E189", label="multilangstring"];
+
+    langstring_converter [fillcolor="#CA89E1", label="converter"];
+
+    // Aligning nodes on the same horizontal line
+    { rank = same; langstring_controller; langstring_flags; }
+    { rank = same; langstring_langstring; langstring_setlangstring; langstring_multilangstring; }
+
+    // DEFINITION OF EDGES
+    langstring_controller -> langstring_langstring [fillcolor="#000000", minlen="3"];
+    langstring_controller -> langstring_multilangstring [fillcolor="#000000", minlen="3"];
+    langstring_controller -> langstring_setlangstring [fillcolor="#000000", minlen="3"];
+
+    langstring_flags -> langstring_controller [fillcolor="#000000", minlen="3"];
+    langstring_flags -> langstring_langstring [fillcolor="#000000", minlen="3"];
+    langstring_flags -> langstring_multilangstring [fillcolor="#000000", minlen="3"];
+    langstring_flags -> langstring_setlangstring [fillcolor="#000000", minlen="3"];
+
+    langstring_langstring -> langstring_converter [fillcolor="#000000", minlen="3"];
+    langstring_langstring -> langstring_multilangstring [fillcolor="#000000", minlen="3"];
+    langstring_langstring -> langstring_setlangstring [fillcolor="#000000", minlen="3"];
+
+    langstring_multilangstring -> langstring_converter [fillcolor="#000000", minlen="3"];
+
+    langstring_setlangstring -> langstring_converter [fillcolor="#000000", minlen="3"];
+    langstring_setlangstring -> langstring_multilangstring [fillcolor="#000000", minlen="3"];
+}
