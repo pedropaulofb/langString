@@ -38,7 +38,7 @@ sphinx-autoapi = "^3.0.0"
 sphinx-rtd-size = "^0.2.0"
 sphinx-rtd-theme = "^2.0.0"
 sphinx-toolbox = "^3.5.0"
-myst-parser = "^2.0.0"
+myst-parser = ">=2,<4"
 # Flake8 and plugins
 flake8 = "^6.1.0"
 flake8-broken-line = "^1.0.0"
