@@ -337,7 +337,7 @@ def test_langstring_init_with_additional_boundary_values(text, lang):
     "text, lang",
     [
         ("    ", "en"),  # String with only spaces
-        ("\u200B\u200C\u200D", "en"),  # Zero-width characters
+        ("\u200b\u200c\u200d", "en"),  # Zero-width characters
         ("Hello\nWorld", "en"),  # String with newline characters
         ("\t \n \r", "en"),  # String with various whitespace characters
     ],
