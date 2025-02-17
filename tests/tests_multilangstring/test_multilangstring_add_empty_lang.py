@@ -10,7 +10,7 @@ from tests.conftest import TYPEERROR_MSG_SINGULAR
         ("FR", "FR"),
         ("  es  ", "  es  "),
         ("DE-de", "DE-de"),
-        ("\u03B5\u03BB", "\u03B5\u03BB"),  # Greek for 'el'
+        ("\u03b5\u03bb", "\u03b5\u03bb"),  # Greek for 'el'
         ("🌐", "🌐"),
         ("@#$%", "@#$%"),
         ("    ", "    "),
